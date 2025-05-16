@@ -3,7 +3,7 @@
 This is the backend service for **Hiresense AI**, an intelligent resume screening and matching platform. It provides RESTful APIs for resume parsing, LLM-based matching, ATS scoring, and job description analysis using FastAPI.
 
 ---
-🔗 **Frontend Repository**: [https://github.com/RohithRamesh28/HireSense-Ai-frontend](https://github.com/RohithRamesh28/HireSense-Ai-frontend)
+🔗 **Frontend Repository**: [HireSense-Ai-frontend](https://github.com/RohithRamesh28/HireSense-Ai-frontend)
 ## 🚀 Features
 
 - 📄 Resume Upload & Parsing (PDF)
