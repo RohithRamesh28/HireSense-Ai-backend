@@ -9,9 +9,9 @@ This is the backend service for **Hiresense AI**, an intelligent resume screenin
 - 📄 Resume Upload & Parsing (PDF)
 - 🧠 LLM-based Resume-to-JD Matching
 - 📊 ATS-Style Scoring
-- 🔍 Fast Vector Search (FAISS/Milvus)
+- 🔍 Fast Vector Search/DB (FAISS)
 - 📝 JD Parsing via Text or PDF
-- 👁 Inline Resume Preview & Download
+- 👁 Inline Resume Download
 
 ---
 
@@ -20,7 +20,7 @@ This is the backend service for **Hiresense AI**, an intelligent resume screenin
 - Python 3.10+
 - FastAPI
 - OpenAI API
-- FAISS (for vector search)
+- FAISS (for vector search/vector storage)
 - PyMuPDF / pdfplumber (PDF parsing)
 - Uvicorn (ASGI Server)
 
@@ -54,12 +54,16 @@ Start the FastAPI server using Uvicorn on port 8070:
 uvicorn main:app --reload --port 8070
 ⚠️ Make sure you use localhost:8070 — the frontend expects this URL for API communication.
 
+```
+
 📤 Upload & Match API Usage
 
 POST /upload/: Upload resumes
 POST /match/: Match resumes to JD (text or PDF)
-POST /score/: Get ATS score
-GET /view-resume/{resume_id}: Preview or download resume PDF
+POST /ats-score/: Get ATS score
+POST /instant-upload-match/ - Match Resumes with Jd and resumes
+POST /ats-jd-score/ - Get ATS score and JD combined
+GET /view-resume/{resume_id}: download resume PDF
 
 🧪 Sample .env.example
 # Rename this file to .env and insert your actual key
