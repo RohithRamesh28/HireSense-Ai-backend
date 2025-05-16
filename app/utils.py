@@ -2,6 +2,8 @@ import json
 import re
 
 import openai
+from dotenv import load_dotenv
+load_dotenv()
 
 
 def banded_score(similarity: float) -> float:
