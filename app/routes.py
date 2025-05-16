@@ -26,6 +26,9 @@ def is_valid_resume(metadata, resume_text):
 
 
 #download resumes happens here, 
+@router.get("/")
+async def root():
+    print("Health Check")
 
 @router.get("/view-resume/{resume_id}")
 async def view_resume(resume_id: str):
